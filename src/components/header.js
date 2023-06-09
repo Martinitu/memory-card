@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Header = function() {
  
     const [score, setScore] = useState(0);
-const addScore = function(){
+   const addScore = function(){
     setScore( score + 1)
 };
 

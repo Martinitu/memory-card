@@ -27,6 +27,8 @@ const DisplayCards = () => {
         "./cards/8.jpg",
         "./cards/9.jpg",
         "./cards/10.jpg",
+        "./cards/11.jpg",
+        "./cards/12.jpg",
     ]
     const shuffleCards = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -52,7 +54,7 @@ const DisplayCards = () => {
       }
     
       return (
-        <div>
+        <div className='cards'>
           {shuffledCards.map((card, index) => (
             <img 
             className={"card" + index} 
@@ -74,15 +76,18 @@ const DisplayCards = () => {
             <div className='header'>
         <h1 className='title'>Memory Game</h1>
         <div className='score'>
-            <p className='scoreTitle'>score: </p>
+            <div className='scoreTitle'>
+            <p >score: </p>
             <p className='scoreCount'>{score}</p>
-            <p className='bestScoreTitle'>best score: </p>
+            </div>
+            <div className='scoreTitle'>
+            <p >best score: </p>
             <p className='bestScoreCount'>{bestScore}</p>
-
+            </div>
         </div>
   
     </div>
-        Main
+        
         <DisplayCards />
         </div>
     )
